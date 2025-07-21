@@ -1,27 +1,46 @@
 # mini-ecommerce-collaboration.
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini E-Commerce</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>My Simple Store</h1>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="ค้นหาสินค้า...">
-        </div>
-        <!-- <div id="loader" class="loader">Loading...</div>  -->
-    </header>
-    
-    <main id="product-list">
-        </main>
+document.addEventListener('DOMContentLoaded', () => {
+    const productList = document.getElementById('product-list');
+    const searchInput = document.getElementById('searchInput');
+    const loader = document.getElementById('loader');    
+    let allProducts = [];
 
-    <script src="js/main.js"></script>
-    <div class="youtube-container" style="text-align:center;">
-</div>
-</body>
-</html>
-  
+
+    // Fetch products from JSON
+    fetch('js/products.json')
+        .then(response => response.json())
+        .then(data => {
+            allProducts = data;
+            displayProducts(allProducts);
+        });
+
+    function displayProducts(products) {
+        productList.innerHTML = ''; // Clear previous list
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            const formattedPrice = Number(product.price).toLocaleString('th-TH'); 
+            card.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+            
+            <p>ราคา: ${product.price.toLocaleString()} บาท</p>
+            `;
+            productList.appendChild(card);
+        });
+    }
+
+    // Inefficient Search
+    searchInput.addEventListener('keyup', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredProducts = allProducts.filter(product => {
+            // Simple search, not very efficient
+            return product.name.toLowerCase().includes(searchTerm);
+        });
+        displayProducts(filteredProducts);
+    });
+});
+
+
+
+
