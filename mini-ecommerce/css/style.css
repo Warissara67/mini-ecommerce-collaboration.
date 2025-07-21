@@ -1,20 +1,59 @@
-body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; }
-header { background: #333; color: #fff; padding: 1rem; text-align: center; }
-input[type="text"] { width: 60%; padding: 8px; }
-main {justify-content: center; padding: 1rem; }
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #04a1ea;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 8px;
+}
+
+main {
+    justify-content: center;
+    padding: 1rem;
+}
+
 .product-card {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
+    border-radius: 10px;
+    margin: 50px;
     padding: 15px;
     width: 200px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(1.15);
+    object-fit: cover;
+    
 }
-.product-card img { max-width: 100%; height: auto; }
-.product-card h3 { font-size: 1.1em; }
-.product-card p { color: #888; }
 
-#product-list {display: flex; flex-wrap: wrap;}
+.product-card img {
+    width: 200px;       /* กำหนดความกว้าง */
+    height: 200px;      /* กำหนดความสูง */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    object-fit: cover;  /* ครอบภาพให้เต็มวงกลมโดยไม่บิดเบือน */
+    display: block;     /* ปรับการแสดงผลให้อยู่ในบรรทัดใหม่ */
+    margin: 0 auto;     /* จัดกึ่งกลางภาพในการ์ด */
+}
+
+
+.product-card h3 {
+    font-size: 1.1em;
+}
+
+.product-card p {
+    color: #121415;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
