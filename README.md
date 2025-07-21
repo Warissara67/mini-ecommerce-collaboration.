@@ -1,110 +1,27 @@
 # mini-ecommerce-collaboration.
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #004d00, #006600); 
-    color: #f9f6f0; 
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini E-Commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My Simple Store</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="ค้นหาสินค้า...">
+        </div>
+        <!-- <div id="loader" class="loader">Loading...</div>  -->
+    </header>
+    
+    <main id="product-list">
+        </main>
 
-header {
-    background: linear-gradient(90deg, #c8102e, #e63946); 
-    color: #fff;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.8rem;
-    box-shadow: 0 4px 12px rgba(200, 20, 40, 0.6);
-    letter-spacing: 2px;
-    text-shadow: 0 2px 6px #820000;
-}
-
-input[type="text"] {
-    width: 60%;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: 2px solid #d4af37; 
-    border-radius: 25px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.4);
-    margin: 20px auto;
-    display: block;
-    background: #fff8dc;
-    color: #4b3b00;
-    font-weight: 600;
-}
-
-input[type="text"]:focus {
-    border-color: #ffbf00;
-    box-shadow: 0 4px 12px rgba(255, 191, 0, 0.7);
-}
-
-
-main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 1rem;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-.product-card {
-    background: linear-gradient(145deg, #fff9f2, #f7e8dc);
-    border: 2px solid #d4af37;
-    border-radius: 20px;
-    padding: 20px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.product-card:hover {
-    transform: scale(1.12);
-    box-shadow: 0 14px 35px rgba(255, 191, 0, 0.6);
-}
-
-
-.product-card img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 15px;
-    box-shadow: 0 0 15px 4px #d4af37cc;
-    transition: box-shadow 0.3s ease;
-}
-
-.product-card:hover img {
-    box-shadow: 0 0 25px 6px #ffd700cc;
-}
-
-
-.product-card h3 {
-    font-size: 1.3rem;
-    color: #b22222; 
-    margin-bottom: 8px;
-    font-weight: 800;
-    text-shadow: 0 1px 3px #660000aa;
-}
-
-
-.product-card p {
-    color: #004d00;
-    font-size: 1rem;
-    line-height: 1.4;
-    font-weight: 600;
-}
-
-#product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
+    <script src="js/main.js"></script>
+    <div class="youtube-container" style="text-align:center;">
+</div>
+</body>
+</html>
+  
