@@ -42,4 +42,4 @@ feature/ui-ux-improvements</br>
 
 Clone repository:
 ```bash
-git clone https://github.com/Benjasarayut/mini-ecommerce-collaboration1.git
+git clone https://github.com/Warissara67/mini-ecommerce-collaboration..git
